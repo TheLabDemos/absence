@@ -18,20 +18,23 @@ Credits
  - Music: Konstantinos Leivadaros (Amigo)
  - Additional Graphics: Nikos Mpatalas (Amoivikos)
 
-Status
+Issues
 ------
 The code in this repository is currently incomplete. It's only the demo-specific
 parts, which use my circa 2002-2003 3D engine, and other reusable pieces of code
 which I kept out of tree back then. I think I have all the pieces, and I intend
 to gather them all up into this repo soon.
 
-Also this demo was originally written for windows, and the 3D engine (which is
-missing at the moment) was based on Direct3D 8, so it's not portable. I'd like
-to port it to OpenGL and GNU/Linux, when I have gathered all the pieces here,
-but this will probably take some time.
+This demo and the 3D engine it uses (which is missing at the moment), was
+originally written for windows and it's not portable.  When I gather all the
+bits in this repo, I'd like to port it to OpenGL and GNU/Linux, but this will
+probably take some time.
 
 Also this demo used fmod for music playback, which I intend to replace with
 mikmod, to avoid proprietary dependencies.
+
+Unfortunately this repository doesn't contain the original commit history,
+because I wasn't using any kind of source control when I wrote this demo.
 
 
 Original Readme file
