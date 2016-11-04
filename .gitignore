@@ -1,0 +1,11 @@
+*.o
+*.d
+*.swp
+*.exe
+*.lib
+Debug/
+Release/
+*.ncb
+*.suo
+*.old
+*.user

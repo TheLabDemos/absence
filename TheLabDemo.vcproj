@@ -1,340 +1,490 @@
-<?xml version="1.0" encoding = "Windows-1252"?>
+<?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="7.00"
+	Version="8.00"
 	Name="TheLabDemo"
 	ProjectGUID="{5346BE25-4A84-4401-82EB-88E9E6B9009D}"
-	Keyword="Win32Proj">
+	Keyword="Win32Proj"
+	>
 	<Platforms>
 		<Platform
-			Name="Win32"/>
+			Name="Win32"
+		/>
 	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
 			OutputDirectory="Debug"
 			IntermediateDirectory="Debug"
 			ConfigurationType="1"
-			CharacterSet="2">
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC70.vsprops"
+			CharacterSet="2"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				PreprocessorDefinitions="NUC3D_VER_DIRECT3D"
-				MinimalRebuild="TRUE"
+				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="5"
+				RuntimeLibrary="1"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
-				Detect64BitPortabilityProblems="TRUE"
-				DebugInformationFormat="4"/>
+				Detect64BitPortabilityProblems="true"
+				DebugInformationFormat="4"
+			/>
 			<Tool
-				Name="VCCustomBuildTool"/>
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
 			<Tool
 				Name="VCLinkerTool"
 				OutputFile="$(OutDir)/TheLabDemo.exe"
 				LinkIncremental="2"
-				GenerateDebugInformation="TRUE"
+				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(OutDir)/TheLabDemo.pdb"
 				SubSystem="2"
-				TargetMachine="1"/>
+				TargetMachine="1"
+			/>
 			<Tool
-				Name="VCMIDLTool"/>
+				Name="VCALinkTool"
+			/>
 			<Tool
-				Name="VCPostBuildEventTool"/>
+				Name="VCManifestTool"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool"/>
+				Name="VCXDCMakeTool"
+			/>
 			<Tool
-				Name="VCPreLinkEventTool"/>
+				Name="VCBscMakeTool"
+			/>
 			<Tool
-				Name="VCResourceCompilerTool"/>
+				Name="VCFxCopTool"
+			/>
 			<Tool
-				Name="VCWebServiceProxyGeneratorTool"/>
+				Name="VCAppVerifierTool"
+			/>
 			<Tool
-				Name="VCWebDeploymentTool"/>
+				Name="VCWebDeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
 			OutputDirectory="Release"
 			IntermediateDirectory="Release"
 			ConfigurationType="1"
-			CharacterSet="2">
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC70.vsprops"
+			CharacterSet="2"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
-				OmitFramePointers="TRUE"
+				OmitFramePointers="true"
 				PreprocessorDefinitions="NUC3D_VER_DIRECT3D"
-				StringPooling="TRUE"
-				RuntimeLibrary="4"
-				EnableFunctionLevelLinking="TRUE"
+				StringPooling="true"
+				RuntimeLibrary="0"
+				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
-				Detect64BitPortabilityProblems="TRUE"
-				DebugInformationFormat="3"/>
+				Detect64BitPortabilityProblems="true"
+				DebugInformationFormat="3"
+			/>
 			<Tool
-				Name="VCCustomBuildTool"/>
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
 			<Tool
 				Name="VCLinkerTool"
 				OutputFile="$(OutDir)/TheLabDemo.exe"
 				LinkIncremental="1"
-				GenerateDebugInformation="TRUE"
+				GenerateDebugInformation="true"
 				SubSystem="2"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
-				TargetMachine="1"/>
+				TargetMachine="1"
+			/>
 			<Tool
-				Name="VCMIDLTool"/>
+				Name="VCALinkTool"
+			/>
 			<Tool
-				Name="VCPostBuildEventTool"/>
+				Name="VCManifestTool"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool"/>
+				Name="VCXDCMakeTool"
+			/>
 			<Tool
-				Name="VCPreLinkEventTool"/>
+				Name="VCBscMakeTool"
+			/>
 			<Tool
-				Name="VCResourceCompilerTool"/>
+				Name="VCFxCopTool"
+			/>
 			<Tool
-				Name="VCWebServiceProxyGeneratorTool"/>
+				Name="VCAppVerifierTool"
+			/>
 			<Tool
-				Name="VCWebDeploymentTool"/>
+				Name="VCWebDeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 	</Configurations>
+	<References>
+	</References>
 	<Files>
 		<Filter
 			Name="Source Files"
-			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;h;hpp">
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;h;hpp"
+			>
 			<File
-				RelativePath="demo.cpp">
+				RelativePath="src\demo.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\demosystem\demosys.cpp">
+				RelativePath="src\demosystem\demosys.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\demosystem\demosys.h">
+				RelativePath="src\demosystem\demosys.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\fmod.h">
+				RelativePath="src\common\fmod.h"
+				>
 			</File>
 			<File
-				RelativePath="resource.h">
+				RelativePath="resource.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\timing.cpp">
+				RelativePath="src\common\timing.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\timing.h">
+				RelativePath="src\common\timing.h"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="3D Engine"
-			Filter="">
+			>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\3deng.h">
+				RelativePath="src\3deng_dx8\3deng.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\3dengine.cpp">
+				RelativePath="src\3deng_dx8\3dengine.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\3dengine.h">
+				RelativePath="src\3deng_dx8\3dengine.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\3dengtypes.h">
+				RelativePath="src\3deng_dx8\3dengtypes.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\3dgeom.cpp">
+				RelativePath="src\3deng_dx8\3dgeom.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\3dgeom.h">
+				RelativePath="src\3deng_dx8\3dgeom.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\3dscene.cpp">
+				RelativePath="src\3deng_dx8\3dscene.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\3dscene.h">
+				RelativePath="src\3deng_dx8\3dscene.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\3dschunks.h">
+				RelativePath="src\3deng_dx8\3dschunks.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\Particles.cpp">
+				RelativePath="src\3deng_dx8\camera.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\Particles.h">
+				RelativePath="src\3deng_dx8\camera.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\SceneLoader.cpp">
+				RelativePath="src\common\color.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\SceneLoader.h">
+				RelativePath="src\common\color.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\camera.cpp">
+				RelativePath="src\common\curves.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\camera.h">
+				RelativePath="src\common\curves.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\color.cpp">
+				RelativePath="src\3deng_dx8\exceptions.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\color.h">
+				RelativePath="src\3deng_dx8\exceptions.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\curves.cpp">
+				RelativePath="src\3deng_dx8\lights.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\curves.h">
+				RelativePath="src\3deng_dx8\lights.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\exceptions.cpp">
+				RelativePath="src\3deng_dx8\material.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\exceptions.h">
+				RelativePath="src\3deng_dx8\material.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\lights.cpp">
+				RelativePath="src\3deng_dx8\motion.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\lights.h">
+				RelativePath="src\3deng_dx8\motion.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\material.cpp">
+				RelativePath="src\common\n3dmath.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\material.h">
+				RelativePath="src\common\n3dmath.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\motion.cpp">
+				RelativePath="src\common\n3dmath.inl"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\motion.h">
+				RelativePath="src\3deng_dx8\objectgen.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\n3dmath.cpp">
+				RelativePath="src\3deng_dx8\objectgen.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\n3dmath.h">
+				RelativePath="src\3deng_dx8\objects.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\n3dmath.inl">
+				RelativePath="src\3deng_dx8\objects.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\objectgen.cpp">
+				RelativePath="src\3deng_dx8\Particles.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\objectgen.h">
+				RelativePath="src\3deng_dx8\Particles.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\objects.cpp">
+				RelativePath="src\3deng_dx8\SceneLoader.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\objects.h">
+				RelativePath="src\3deng_dx8\SceneLoader.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\switches.h">
+				RelativePath="src\3deng_dx8\switches.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\textureman.cpp">
+				RelativePath="src\3deng_dx8\textureman.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\3deng_dx8\textureman.h">
+				RelativePath="src\3deng_dx8\textureman.h"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="nwt"
-			Filter="">
+			>
 			<File
-				RelativePath="..\..\..\..\headers\nwt\NucWin.h">
+				RelativePath="src\nwt\nucwin.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\nwt\nucwin.cpp">
+				RelativePath="src\nwt\NucWin.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\nwt\startup.h">
+				RelativePath="src\nwt\startup.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\nwt\widget.cpp">
+				RelativePath="src\nwt\widget.cpp"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\headers\nwt\widget.h">
+				RelativePath="src\nwt\widget.h"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="Direct3D"
-			Filter="">
+			>
 			<File
-				RelativePath="..\..\..\..\dx9sdk\Include\d3d8.h">
+				RelativePath="..\..\..\..\dx9sdk\Include\d3d8.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\dx9sdk\Lib\d3d8.lib">
+				RelativePath="..\..\..\..\dx9sdk\Lib\d3d8.lib"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\dx9sdk\Include\d3dx8.h">
+				RelativePath="..\..\..\..\dx9sdk\Include\d3dx8.h"
+				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\dx9sdk\Lib\d3dx8.lib">
+				RelativePath="..\..\..\..\dx9sdk\Lib\d3dx8.lib"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="Resources"
-			Filter="">
+			>
 			<File
-				RelativePath="resources.rc">
+				RelativePath="resources.rc"
+				>
 			</File>
 			<File
-				RelativePath="thelab.ico">
+				RelativePath="thelab.ico"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="DemoParts"
-			Filter="">
+			>
 			<File
-				RelativePath="BeginPart.cpp">
+				RelativePath="src\BeginPart.cpp"
+				>
 			</File>
 			<File
-				RelativePath="BeginPart.h">
+				RelativePath="src\BeginPart.h"
+				>
 			</File>
 			<File
-				RelativePath="DemonPart.cpp">
+				RelativePath="src\DemonPart.cpp"
+				>
 			</File>
 			<File
-				RelativePath="DemonPart.h">
+				RelativePath="src\DemonPart.h"
+				>
 			</File>
 			<File
-				RelativePath="DungeonPart.cpp">
+				RelativePath="src\DungeonPart.cpp"
+				>
 			</File>
 			<File
-				RelativePath="DungeonPart.h">
+				RelativePath="src\DungeonPart.h"
+				>
 			</File>
 			<File
-				RelativePath="GreetsPart.cpp">
+				RelativePath="src\GreetsPart.cpp"
+				>
 			</File>
 			<File
-				RelativePath="GreetsPart.h">
+				RelativePath="src\GreetsPart.h"
+				>
 			</File>
 			<File
-				RelativePath="HellPart.h">
+				RelativePath="src\hellpart.cpp"
+				>
 			</File>
 			<File
-				RelativePath="TreePart.cpp">
+				RelativePath="src\HellPart.h"
+				>
 			</File>
 			<File
-				RelativePath="TreePart.h">
+				RelativePath="src\TreePart.cpp"
+				>
 			</File>
 			<File
-				RelativePath="TunnelPart.cpp">
+				RelativePath="src\TreePart.h"
+				>
 			</File>
 			<File
-				RelativePath="TunnelPart.h">
+				RelativePath="src\TunnelPart.cpp"
+				>
 			</File>
 			<File
-				RelativePath="hellpart.cpp">
+				RelativePath="src\TunnelPart.h"
+				>
 			</File>
 		</Filter>
 		<File
-			RelativePath="..\..\..\..\headers\fmodvc.lib">
+			RelativePath="src\common\fmodvc.lib"
+			>
 		</File>
 		<File
-			RelativePath="n3dinit.conf">
+			RelativePath="n3dinit.conf"
+			>
 		</File>
 	</Files>
 	<Globals>
