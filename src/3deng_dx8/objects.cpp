@@ -197,7 +197,8 @@ void Object::SetRenderStates() {
 	gc->SetWorldMatrix(GetWorldTransform());
 	
 	gc->SetMaterial(material);
-	if(AutoSetZWrite && material.Alpha < 0.991f) rendp.ZWrite = false;
+	// RESTORATION: it looks like this was a later feature
+	//if(AutoSetZWrite && material.Alpha < 0.991f) rendp.ZWrite = false;
 	gc->SetSpecular(material.SpecularEnable);
 
 	gc->SetVertexProgram(rendp.VertexProgram);
@@ -206,6 +207,12 @@ void Object::SetRenderStates() {
 }
 
 void Object::Render() {
+	/* RESTORATION:
+	 * I know that at the time I was writing this, I never had a card with more
+	 * than 2 texture units, so it's best to just disable the untested code
+	 * paths completely (Render4TexUnits/Render8TexUnits).
+	 */
+	/*
 	int TexUnits = gc->GetTextureStageNumber();
 
 	if(TexUnits < 4) {
@@ -215,6 +222,8 @@ void Object::Render() {
 	} else {
 		Render8TexUnits();
 	}
+	*/
+	Render2TexUnits();
 }
 
 void Object::Render2TexUnits() {
@@ -433,7 +442,7 @@ void Object::Render4TexUnits() {
 		gc->SetAlphaBlending(false);
 	}
 
-	if(!rendp.ZWrite) gc->SetZWrite(false);
+	if(!rendp.ZWrite) gc->SetZWrite(true);
 }
 
 
