@@ -203,7 +203,7 @@ Vector3 CatmullRomSpline::Interpolate(float t) {
 	Cp[1] = iter->data;
 	Cp[2] = iter->next->data;
 	
-	if(!seg) {
+	if(!seg || !iter->prev) {
 		Cp[0] = Cp[1];
 	} else {
 		Cp[0] = iter->prev->data;
