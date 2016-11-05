@@ -19,7 +19,6 @@
 			OutputDirectory="Debug"
 			IntermediateDirectory="Debug"
 			ConfigurationType="1"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC70.vsprops"
 			CharacterSet="2"
 			>
 			<Tool
@@ -40,6 +39,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories="src;src\common"
 				PreprocessorDefinitions="NUC3D_VER_DIRECT3D"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -48,6 +48,7 @@
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="4"
+				DisableSpecificWarnings="4996"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -60,8 +61,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="d3d8.lib d3dx8.lib"
 				OutputFile="$(OutDir)/TheLabDemo.exe"
 				LinkIncremental="2"
+				IgnoreDefaultLibraryNames="libci.lib"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(OutDir)/TheLabDemo.pdb"
 				SubSystem="2"
@@ -97,7 +100,6 @@
 			OutputDirectory="Release"
 			IntermediateDirectory="Release"
 			ConfigurationType="1"
-			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC70.vsprops"
 			CharacterSet="2"
 			>
 			<Tool
@@ -120,6 +122,7 @@
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				OmitFramePointers="true"
+				AdditionalIncludeDirectories="src;src\common"
 				PreprocessorDefinitions="NUC3D_VER_DIRECT3D"
 				StringPooling="true"
 				RuntimeLibrary="0"
@@ -128,6 +131,7 @@
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="3"
+				DisableSpecificWarnings="4996"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -140,8 +144,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalDependencies="d3d8.lib d3dx8.lib"
 				OutputFile="$(OutDir)/TheLabDemo.exe"
 				LinkIncremental="1"
+				IgnoreDefaultLibraryNames="libci.lib"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				OptimizeReferences="2"
@@ -383,26 +389,6 @@
 			</File>
 			<File
 				RelativePath="src\nwt\widget.h"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="Direct3D"
-			>
-			<File
-				RelativePath="..\..\..\..\dx9sdk\Include\d3d8.h"
-				>
-			</File>
-			<File
-				RelativePath="..\..\..\..\dx9sdk\Lib\d3d8.lib"
-				>
-			</File>
-			<File
-				RelativePath="..\..\..\..\dx9sdk\Include\d3dx8.h"
-				>
-			</File>
-			<File
-				RelativePath="..\..\..\..\dx9sdk\Lib\d3dx8.lib"
 				>
 			</File>
 		</Filter>

@@ -38,6 +38,7 @@ const Color &Light::GetColor(PhongComponent comp) const {
 	switch(comp) {
 	case Ambient:
 		return ambient_color;
+	default:
 	case Diffuse:
 		return diffuse_color;
 	case Specular:

@@ -2,7 +2,7 @@
 #define _TREEPART_H_
 
 #include "demosystem/demosys.h"
-#include "3deng/particles.h"
+#include "3deng_dx8/particles.h"
 
 class TreePart : public Part {
 private:

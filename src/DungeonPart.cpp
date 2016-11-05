@@ -45,16 +45,16 @@ DungeonPart::DungeonPart(GraphicsContext *gc) {
 	// load the flame textures
 	for(int i=0; i<FLAME_TEXTURES; i++) {
 		char num[3];
-		itoa(i, num, 10);
-		string fname = string("data/textures/flame/flame") + (i < 10 ? string("0") : string("")) + string(num) + string(".jpg");
+		sprintf(num, "%02d", i);
+		string fname = string("data/textures/flame/flame") + string(num) + string(".jpg");
 		FlameTex[i] = gc->texman->AddTexture(fname.c_str());
 	}
 
 	// get the flame objects and remove them from the scene (to take over the rendering)
 	for(int i=0; i<16; i++) {
 		char num[3];
-		itoa(i, num, 10);
-		string name = string("Fire") + (i < 10 ? string("0") : string("")) + string(num);
+		sprintf(num, "%02d", i);
+		string name = string("Fire") + string(num);
 		
 		Flame[i] = scene->GetObject(name.c_str());
 		scene->RemoveObject(Flame[i]);
