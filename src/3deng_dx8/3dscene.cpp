@@ -330,12 +330,28 @@ void Scene::Render() const {
 		RenderShadows();
 	}
 
-	// render objects
+	/* RESTORATION: render transparent objects last.
+	 * I don't know how this used to work, maybe the earlier engine version
+	 * used to split them during loading? no idea.
+	 */
+	// render opaque objects
 	std::list<Object *>::const_iterator iter = objects.begin();
 	while(iter != objects.end()) {
 		Object *obj = *iter++;
 
-		obj->Render();
+		if(obj->material.Alpha > 0.991f && !obj->material.HasTransparentTex) {
+			obj->Render();
+		}
+	}
+	// render transparent objects
+	iter = objects.begin();
+	while(iter != objects.end()) {
+		Object *obj = *iter++;
+
+		if(!(obj->material.Alpha > 0.991f && !obj->material.HasTransparentTex)) {
+			obj->SetWriteZBuffer(false);
+			obj->Render();
+		}
 	}
 
 	if(Shadows) {

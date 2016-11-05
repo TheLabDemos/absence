@@ -197,7 +197,6 @@ void Object::SetRenderStates() {
 	gc->SetWorldMatrix(GetWorldTransform());
 	
 	gc->SetMaterial(material);
-	// RESTORATION: it looks like this was a later feature
 	//if(AutoSetZWrite && material.Alpha < 0.991f) rendp.ZWrite = false;
 	gc->SetSpecular(material.SpecularEnable);
 

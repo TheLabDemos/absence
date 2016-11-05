@@ -2,6 +2,7 @@
 #include <windows.h>
 #include <string>
 #include <cassert>
+#include <cctype>
 #include "sceneloader.h"
 #include "3dschunks.h"
 #include "typedefs.h"
@@ -383,6 +384,7 @@ Material ReadMaterial(HANDLE file, const ChunkHeader &ch) {
 
 		Percent p;
 		TexMap map;
+		Texture *tex;
 
 		switch(chunk.id) {
 		case Chunk_Mat_Name:
@@ -429,7 +431,28 @@ Material ReadMaterial(HANDLE file, const ChunkHeader &ch) {
 		case Chunk_Mat_OpacityMap:
 		case Chunk_Mat_SelfIlluminationMap:
 			map = ReadTextureMap(file, chunk);
-			mat.SetTexture(gc->texman->LoadTexture((datapath + map.filename).c_str()), map.type);
+			tex = gc->texman->LoadTexture((datapath + map.filename).c_str());
+			mat.SetTexture(tex, map.type);
+			// RESTORATION: ugh ... (hack)
+			if(chunk.id == Chunk_Mat_TextureMap && tex) {
+				D3DLOCKED_RECT rect;
+				D3DSURFACE_DESC desc;
+
+				tex->GetLevelDesc(0, &desc);
+				if(desc.Format != D3DFMT_A8R8G8B8) break;	// no alpha channel
+
+				if(tex->LockRect(0, &rect, 0, D3DLOCK_READONLY) != D3D_OK) {
+					break;
+				}
+				unsigned int *pix = (unsigned int*)rect.pBits;
+				for(int i=0; i<(int)(desc.Height * desc.Width); i++) {
+					if((*pix++ >> 24) < 0xff) {
+						mat.HasTransparentTex = true;
+						break;
+					}
+				}
+				tex->UnlockRect(0);
+			}
             break;
 
 		case Chunk_Mat_ReflectionMap:
@@ -536,7 +559,6 @@ string ReadString(HANDLE file) {
 	while(c = (char)ReadByte(file)) {
 		str.push_back(c);
 	}
-	str.push_back('\0');
 	ReadCounter++;
 
 	return str;

@@ -9,6 +9,7 @@ Material::Material() {
 	Specular.r = Specular.g = Specular.b = 1.0f;
 	EnvBlend = 1.0f;
 	Alpha = 1.0f;
+	HasTransparentTex = false;
 }
 
 Material::Material(float r, float g, float b, float a) {
@@ -21,6 +22,7 @@ Material::Material(float r, float g, float b, float a) {
 	Specular.r = Specular.g = Specular.b = 1.0f;
 	EnvBlend = 1.0f;
 	Alpha = 1.0f;
+	HasTransparentTex = false;
 }
 
 void Material::SetAmbient(float r, float g, float b) {

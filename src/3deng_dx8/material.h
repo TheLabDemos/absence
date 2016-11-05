@@ -26,6 +26,7 @@ public:
 	float EnvBlend, BumpIntensity;
 	float Alpha;
 	bool SpecularEnable;
+	bool HasTransparentTex;	// RESTORATION: hack
 
 	Material();
 	Material(float r, float g, float b, float a=1.0f);
