@@ -325,6 +325,7 @@ void Object::Render2TexUnits() {
 
 		if(stage > 0) gc->Draw(vb, ib);
 
+		gc->DisableTextureStage(1);
 		gc->SetAlphaBlending(false);
 	}
 
