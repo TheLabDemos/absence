@@ -300,7 +300,8 @@ void Scene::Render() const {
 	float NearClip, FarClip;
 	Matrix4x4 ProjMat;
 	ActiveCamera->GetClippingPlanes(&NearClip, &FarClip);
-	CreateProjectionMatrix(&ProjMat, ActiveCamera->GetFOV(), 1.3333333f, NearClip, FarClip);
+	float aspect = (float)gc->ContextParams.x / (float)gc->ContextParams.y;
+	CreateProjectionMatrix(&ProjMat, ActiveCamera->GetFOV(), aspect, NearClip, FarClip);
 	gc->SetProjectionMatrix(ProjMat);	
 
 	SetupLights();

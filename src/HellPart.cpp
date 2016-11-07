@@ -212,7 +212,8 @@ void HellPart::MainLoop() {
 		gc->SetViewMatrix(ViewMat);
 		Matrix4x4 ProjMat, OldProj;
 		OldProj = gc->GetProjectionMatrix();
-		CreateProjectionMatrix(&ProjMat, QuarterPi, 1.333333f, 1.0f, 10.0f);
+		float aspect = (float)gc->ContextParams.x / (float)gc->ContextParams.y;
+		CreateProjectionMatrix(&ProjMat, QuarterPi, aspect, 1.0f, 10.0f);
 		gc->SetProjectionMatrix(ProjMat);
 
         Credits->RenderBare();
