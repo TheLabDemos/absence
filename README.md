@@ -20,15 +20,13 @@ Credits
 
 Issues
 ------
-The code in this repository is currently incomplete. It's only the demo-specific
-parts, which use my circa 2002-2003 3D engine, and other reusable pieces of code
-which I kept out of tree back then. I think I have all the pieces, and I intend
-to gather them all up into this repo soon.
+The 3D engine code I dug up is from a slightly later date than the demo, and
+contains some changes which introduce bugs and graphical glitches to the demo,
+when compared to the pre-compiled version from back then.
 
-This demo and the 3D engine it uses (which is missing at the moment), was
-originally written for windows and it's not portable.  When I gather all the
-bits in this repo, I'd like to port it to OpenGL and GNU/Linux, but this will
-probably take some time.
+This demo and the 3D engine it uses, were originally written for windows using
+the Direct3D 8 API, which make them not portable. I'd like to port it to OpenGL
+and GNU/Linux, but this will probably take some time.
 
 Also this demo used fmod for music playback, which I intend to replace with
 mikmod, to avoid proprietary dependencies.
